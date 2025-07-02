@@ -22,8 +22,12 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-gray-900">
-              Vigro Energy
+            <Link href="/" className="flex items-center gap-3">
+              <img 
+                src="images/logo.jpeg" 
+                alt="Vigro Energy Logo" 
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
@@ -138,45 +142,45 @@ export function Navigation() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <div className="grid gap-2 py-6">
-                <Link
-                  href="/"
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/consultation"
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Consultation
-                </Link>
-                <Link
-                  href="/about"
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  onClick={() => setIsOpen(false)}
-                >
-                  About Us
-                </Link>
-                <Link
-                  href="/team"
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Team
-                </Link>
-                <Link
-                  href="/news"
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  onClick={() => setIsOpen(false)}
-                >
-                  News & Insights
-                </Link>
-              </div>
-            </SheetContent>
+              <SheetContent side="right">
+                <div className="grid gap-2 py-6">
+                  <Link
+                    href="/"
+                    className="flex w-full items-center py-2 text-lg font-semibold"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href="/consultation"
+                    className="flex w-full items-center py-2 text-lg font-semibold"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Consultation
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="flex w-full items-center py-2 text-lg font-semibold"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    About Us
+                  </Link>
+                  <Link
+                    href="/team"
+                    className="flex w-full items-center py-2 text-lg font-semibold"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Team
+                  </Link>
+                  <Link
+                    href="/news"
+                    className="flex w-full items-center py-2 text-lg font-semibold"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    News & Insights
+                  </Link>
+                </div>
+              </SheetContent>
           </Sheet>
         </div>
       </div>

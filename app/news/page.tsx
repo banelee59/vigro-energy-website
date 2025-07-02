@@ -79,7 +79,7 @@ export default function NewsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative h-96">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/vilgro2.jpeg"
                 alt="Featured article"
                 fill
                 className="object-cover rounded-lg"

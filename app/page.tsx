@@ -9,7 +9,7 @@ export default function HomePage() {
       <section className="relative h-[600px] bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="absolute inset-0">
           <Image
-            src="/images/pic 1.jpg"
+            src="/images/cargo4.jpeg"
             alt="Industrial worker at energy facility"
             fill
             className="object-cover opacity-80"
@@ -18,8 +18,19 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-white max-w-2xl">
-            <h1 className="text-5xl font-bold mb-6">Vigro Energy</h1>
-            <p className="text-xl mb-8">Providing Energy Solutions Anywhere, Anytime, Across Africa.</p>
+            <h1 className="text-5xl font-bold mb-6">Vilgro Energy</h1>
+            <div className="mb-8 space-y-4">
+              <p className="text-2xl font-semibold">
+                Addressing South Africa and SADC's energy security by enabling trade, infrastructure, and expertise in both liquid fuels and gas markets.
+              </p>
+              <p className="text-lg opacity-90">
+                Contributing to solving Africa's Energy Security, One Shipment at a Time.
+              </p>
+              <p className="text-lg">
+                We trade, develop, and advise on energy solutions for Southern Africa and beyond.
+              </p>
+            </div>
+
             <Button size="lg" className="bg-green-700 hover:bg-green-800">
               Learn More
             </Button>
@@ -47,7 +58,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-96">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+               src="/images/pic 1.jpeg"
                 alt="Energy facility"
                 fill
                 className="object-cover rounded-lg"

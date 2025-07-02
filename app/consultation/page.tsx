@@ -64,7 +64,7 @@ export default function ConsultationPage() {
 
             <div className="relative h-96">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/vilgro truck.jpeg"
                 alt="Industrial consultation"
                 fill
                 className="object-cover rounded-lg"
