@@ -38,14 +38,7 @@ export default function TeamPage() {
 
               <div className="text-left max-w-2xl mx-auto">
                 <p className="text-gray-600 mb-4">
-                  Phinda Vilakazi is an experienced executive with over 23 years of diverse experience in Oil and Gas,
-                  Refining, Manufacturing, Trading, Supply, and Joint Venture management, holding key roles such as
-                  Senior Vice President for a commercial B2B energy division, Managing Director of a liquid fuels and
-                  gas marketing & sales business, and Vice President of an International Energy business division. Mr.
-                  Vilakazi brings significant leadership experience across liquid fuels, natural gas, and renewable
-                  energy value chains. His passion for business development is evident through leading diverse,
-                  multi-disciplinary teams globally, with a BSc in Chemical Engineering from the University of Cape Town
-                  and an MBA from GIBS, Princeton. He furthered his executive leadership training at IMD, Switzerland.
+                  ? He furthered his executive leadership training at IMD, Switzerland.
                 </p>
                 <p className="text-gray-600">
                   Mr. Vilakazi's global perspective is enriched by his extensive work in energy hubs in the USA, Qatar,
@@ -71,14 +64,14 @@ export default function TeamPage() {
 
               <div className="text-left max-w-2xl mx-auto">
                 <p className="text-gray-600 mb-4">
-                  John Sichinga boasts over 35 years of comprehensive experience in the Oil and Gas, Petrochemical,
+                  {/* John Sichinga boasts over 35 years of comprehensive experience in the Oil and Gas, Petrochemical,
                   Electricity, and Mining Industries. His distinguished career includes 22 years with Sasol, culminating
                   in a Senior Vice President role for its Oil and Gas division. Mr. Sichinga's global footprint extends
                   across South Africa, India, the USA, Australia, Iran, Qatar, China, Libya, Uganda, Nigeria, and
                   Mozambique. His expertise further encompasses a tenure as Head of Business Operations for Globeleq, a
                   leading African Independent Power Producer, overseeing operations across the continent. Recently, he
                   served as the CEO of Lumika Renewables, a startup renewable energy company backed by AP Moller Capital
-                  and Reurent.
+                  and Reurent. */}
                 </p>
                 <p className="text-gray-600">
                   With a Bachelor's Degree in Chemical Engineering from Birmingham University and a Post Graduate
