@@ -53,9 +53,9 @@ export default function HomePage() {
 
             {/* Right side - Image */}
             <div className="relative h-full min-h-[400px] flex items-end justify-end">
-              <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg">
+              <div className="relative w-60 h-60 rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/cargo5.png"
+                  src="/images/cargo.jpeg"
                   alt="Industrial worker at energy facility"
                   fill
                   className="object-cover"
