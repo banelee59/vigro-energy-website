@@ -24,7 +24,7 @@ export function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-3">
               <img 
-                src="images/logo.jpeg" 
+                src="images/log.png" 
                 alt="Vigro Energy Logo" 
                 className="h-8 w-auto"
               />
