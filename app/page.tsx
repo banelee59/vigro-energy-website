@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] bg-gradient-to-r from-blue-950 to-blue-800">
+      <section className="relative h-[600px] bg-gradient-to-r from-[#1b1b83] to-[#1b1b83]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full items-center">
             {/* Left side - Content */}
@@ -44,7 +44,7 @@ export default function HomePage() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold px-8 py-3 transition-all duration-300"
+                  className="border-2 border-white text-blue-900 hover:bg-white hover:text-blue-900 font-semibold px-8 py-3 transition-all duration-300"
                 >
                   Our Products
                 </Button>
@@ -53,13 +53,14 @@ export default function HomePage() {
 
             {/* Right side - Image */}
             <div className="relative h-full min-h-[400px] flex items-end justify-end">
-              <div className="relative w-60 h-60 rounded-xl overflow-hidden shadow-lg">
+              <div className="relative w-80 h-80">
                 <Image
-                  src="/images/cargo.jpeg"
+                  src="/images/cargo2.jpeg"
                   alt="Industrial worker at energy facility"
                   fill
                   className="object-cover"
                   priority
+                  style={{ border: 'none', outline: 'none' }}
                 />
               </div>
             </div>
