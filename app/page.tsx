@@ -191,7 +191,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="relative h-48 mb-4">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="images/vilgro2.jpeg" 
                     alt="Liquid Fuels"
                     fill
                     className="object-cover rounded-lg"
@@ -213,7 +213,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="relative h-48 mb-4">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="images/pic3.jpg" 
                     alt="Natural Gas & LNG"
                     fill
                     className="object-cover rounded-lg"
