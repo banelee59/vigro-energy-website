@@ -50,7 +50,7 @@ export default function ContactPage() {
       <section className="py-16 bg-white border-b border-slate-200 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 via-white to-teal-50"></div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center justify-center p-3 mb-6 bg-emerald-100 rounded-full border-2 border-emerald-200">
               <Sparkles className="h-8 w-8 text-emerald-600" />

@@ -235,7 +235,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="relative h-48 mb-4">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="images/industrial.jpeg"
                     alt="Infrastructure Development"
                     fill
                     className="object-cover rounded-lg"
@@ -257,7 +257,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="relative h-48 mb-4">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="images/cargo.jpeg"
                     alt="Strategic Advisory"
                     fill
                     className="object-cover rounded-lg"
@@ -279,7 +279,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="relative h-48 mb-4">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="images/cargo3.jpeg"
                     alt="Mergers & Acquisitions"
                     fill
                     className="object-cover rounded-lg"
