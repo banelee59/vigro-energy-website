@@ -6,13 +6,12 @@ import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +20,7 @@ export function Navigation() {
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+        <div className="flex items-center">
             <Link href="/" className="flex items-center gap-3">
               <img 
                 src="images/log.png" 
@@ -46,60 +45,6 @@ export function Navigation() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Our Products</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[400px] p-2">
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/products/crude-oil"
-                        className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none group-hover:underline">Crude Oil</div>
-                        <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Premium crude oil trading and supply solutions
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/products/refined-petroleum"
-                        className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none group-hover:underline">Refined Petroleum</div>
-                        <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          High-quality refined petroleum products
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/products/natural-gas"
-                        className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none group-hover:underline">
-                          Natural Gas and LNG
-                        </div>
-                        <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Natural gas and LNG supply solutions
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link
-                    href="/consultation"
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                  >
-                    Consultation
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
                     href="/about"
@@ -113,10 +58,21 @@ export function Navigation() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="/team"
+                    href="/services"
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                   >
-                    Team
+                    Services
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/place-order"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                  >
+                    Place an Order
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -128,6 +84,17 @@ export function Navigation() {
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                   >
                     News & Insights
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/contact"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                  >
+                    Contact Us
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -142,46 +109,55 @@ export function Navigation() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-              <SheetContent side="right">
-                <div className="grid gap-2 py-6">
-                  <Link
-                    href="/"
-                    className="flex w-full items-center py-2 text-lg font-semibold"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="/consultation"
-                    className="flex w-full items-center py-2 text-lg font-semibold"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Consultation
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="flex w-full items-center py-2 text-lg font-semibold"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    About Us
-                  </Link>
-                  <Link
-                    href="/team"
-                    className="flex w-full items-center py-2 text-lg font-semibold"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Team
-                  </Link>
-                  <Link
-                    href="/news"
-                    className="flex w-full items-center py-2 text-lg font-semibold"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    News & Insights
-                  </Link>
-                </div>
-              </SheetContent>
+            <SheetContent side="right">
+              <div className="grid gap-2 py-6">
+                <Link
+                  href="/"
+                  className="flex w-full items-center py-2 text-lg font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/about"
+                  className="flex w-full items-center py-2 text-lg font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/services"
+                  className="flex w-full items-center py-2 text-lg font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/place-order"
+                  className="flex w-full items-center py-2 text-lg font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Place an Order
+                </Link>
+                <Link
+                  href="/news"
+                  className="flex w-full items-center py-2 text-lg font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  News & Insights
+                </Link>
+                <Link
+                  href="/contact"
+                  className="flex w-full items-center py-2 text-lg font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </SheetContent>
           </Sheet>
+
+          
         </div>
       </div>
     </header>

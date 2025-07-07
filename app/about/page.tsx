@@ -1,6 +1,4 @@
 import Image from "next/image"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Users, Shield, Lightbulb, Heart, Globe, MapPin, Truck, Leaf } from "lucide-react"
 
 export default function AboutPage() {
   return (
@@ -8,239 +6,100 @@ export default function AboutPage() {
       {/* Header */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-center text-gray-900 mb-16">About Us</h1>
+          <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
+            About Us: Powering Africa's Future, One Shipment at a Time
+          </h1>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                At Vilgro Energy, we believe energy is more than just a commodity — it's the heartbeat of progress,
+                industry, and everyday life. Born from a shared vision of bold, independent leadership in the African
+                energy landscape, we are a proudly Level 1 BBBEE company with a singular focus: securing Africa's energy
+                future.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                In a region where the shutdown of crude refineries and a deepening electricity crisis have made South
+                Africa and its neighbours increasingly dependent on imported fuels, we saw more than just a challenge —
+                we saw an opportunity. An opportunity for local ownership, for African-led solutions, and for a trusted
+                partner to reshape the region's energy narrative.
+              </p>
+            </div>
+            <div className="relative h-96">
+              <Image
+                src="/images/about-worker.png"
+                alt="About Vilgro Energy"
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative h-96 lg:order-2">
+              <Image
+                src="/placeholder.svg?height=400&width=600"
+                alt="Energy infrastructure"
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
+            <div className="lg:order-1">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Our work is grounded in reliability, innovation, and collaboration. We've built strong, strategic
+                alliances with global refiners, traders, national oil companies, and governments—relationships forged
+                through trust, consistency, and a deep understanding of complex markets.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                From crude and refined product sourcing to storage, logistics, and transport, our expertise spans the
+                full energy value chain. We don't just move energy; we unlock its potential—designing tailored supply
+                strategies that keep industries moving and economies growing.
+              </p>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-gray-600 mb-6">
-                Vigro Energy was founded in 2023 with the mission of delivering sustainable, secure energy solutions
-                across Southern Africa. Born out of a clear need for reliable fuel supply following the closure of
-                several refineries in South Africa.
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                But we don't stop there. Our team brings decades of global experience to the table, offering advisory
+                and consulting services that help our partners navigate change, manage risk, and find new pathways to
+                growth.
               </p>
-              <p className="text-gray-600">
-                Our leadership team combines decades of experience in the energy sector, working with global refiners,
-                traders, and government stakeholders. The company is Black-owned and proudly South African, holding a
-                Level 1 BBBEE status.
+              <p className="text-xl text-gray-900 font-semibold">
+                At Vilgro Energy, we aren't just participants in Africa's energy story—we're shaping it.
               </p>
             </div>
-            <div className="relative h-80">
-              <Image src="/images/about-worker.png" alt="About Vigro Energy" fill className="object-cover rounded-lg" />
+            <div className="relative h-96">
+              <Image
+                src="/placeholder.svg?height=400&width=600"
+                alt="African energy leadership"
+                fill
+                className="object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* What Drives Us */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">What drives us:</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Users className="h-6 w-6 text-gray-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Customer Centricity</h3>
-                    <p className="text-gray-600">
-                      We build long-term partnerships through reliability, responsiveness, and tailored service.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Shield className="h-6 w-6 text-gray-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Integrity</h3>
-                    <p className="text-gray-600">
-                      We operate with full transparency, guided by ethical practices in every transaction.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Lightbulb className="h-6 w-6 text-gray-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Innovation</h3>
-                    <p className="text-gray-600">We adopt smart, efficient strategies to meet modern energy demands.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Vigro Energy:</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Globe className="h-6 w-6 text-gray-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Reliable Sourcing</h3>
-                    <p className="text-gray-600">Global networks and partners ensure consistency and quality.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-gray-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Regional Reach</h3>
-                    <p className="text-gray-600">Supplying energy solutions across Southern Africa.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Truck className="h-6 w-6 text-gray-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Efficient Delivery</h3>
-                    <p className="text-gray-600">We bridge supply with demand, on time and within budget.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Large Image Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative h-96 rounded-lg overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=400&width=1200"
-              alt="Worker looking up at industrial facility"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Values Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">What Drives Us</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Customer Centricity</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  We build long-term partnerships through reliability, responsiveness, and tailored service.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <MapPin className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Integrity</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  We operate with full transparency, guided by ethical practices in every transaction.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <Lightbulb className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Innovation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>We adopt smart, efficient strategies to meet modern energy demands.</CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <Shield className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Safety</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  We uphold the highest standards of health, safety, and environmental protection.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <Heart className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Social Impact</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  We contribute to regional growth by improving access to energy and enabling economic development.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Vigro Energy</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <Globe className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Reliable Sourcing</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>Global networks and partners ensure consistency and quality.</CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <MapPin className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Regional Reach</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>Supplying energy solutions across Southern Africa.</CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <Truck className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Efficient Delivery</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>We bridge supply with demand, on time and within budget.</CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                  <Leaf className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle>Sustainable Solutions</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>Committed to powering growth through sustainable practices.</CardDescription>
-              </CardContent>
-            </Card>
+      {/* Call to Action */}
+      <section className="py-16 bg-green-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Partner with Us?</h2>
+          <p className="text-green-100 mb-8 text-lg">
+            Join us in shaping Africa's energy future through reliable, innovative, and sustainable solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Contact Us Today
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-green-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Learn About Our Services
+            </button>
           </div>
         </div>
       </section>

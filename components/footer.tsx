@@ -1,4 +1,6 @@
 import Link from "next/link"
+import { Linkedin } from "lucide-react"
+
 
 export function Footer() {
   return (
@@ -48,6 +50,21 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+
+            
+            {/* LinkedIn Icon */}
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold mb-3 text-green-300">Follow Us</h4>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 bg-blue-700 hover:bg-green-600 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl"
+                aria-label="Follow us on LinkedIn"
+              >
+                <Linkedin className="h-5 w-5 text-white" />
+              </a>
+            </div>
           </div>
         </div>
 
