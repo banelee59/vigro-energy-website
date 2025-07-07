@@ -4,9 +4,9 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
+          <h1 className="text-4xl font-bold text-center text-white mb-8">
             About Us: Powering Africa's Future, One Shipment at a Time
           </h1>
         </div>
@@ -32,7 +32,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96">
               <Image
-                src="/images/about-worker.png"
+                src="/images/vilgro truck.jpeg"
                 alt="About Vilgro Energy"
                 fill
                 className="object-cover rounded-lg"
@@ -76,7 +76,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+               
+                src="/images/pic 1.jpg"
                 alt="African energy leadership"
                 fill
                 className="object-cover rounded-lg"
