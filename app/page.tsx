@@ -21,17 +21,18 @@ export default function HomePage() {
               {/* Main value proposition with improved typography */}
               <div className="mb-10 space-y-6">
                 <p className="text-2xl font-semibold leading-relaxed text-white drop-shadow-md">
-                  Contributing to solving Africa's Energy Security, One Shipment at a Time.
+                Contributing towards solving Africa’s Energy Security, One Shipment at a Time.
+
                 </p>
 
                 {/* Mission statement with emphasis */}
                 <div className="bg-blue-800/40 backdrop-blur-sm rounded-lg p-6 border-l-4 border-green-400">
                   <p className="text-xl font-medium text-green-100 mb-3">
-                    Addressing South Africa and SADC's energy security by enabling trade, infrastructure, and expertise
-                    in both liquid fuels and gas markets.
+                  We trade, develop, and advise on energy solutions for Southern Africa and beyond.
                   </p>
                   <p className="text-lg text-blue-100">
-                    We trade, develop, and advise on energy solutions for Southern Africa and beyond.
+                  Our focus is on addressing South Africa and SADC's energy security by enabling trade, infrastructure, and expertise in both liquid fuels and gas markets.
+
                   </p>
                 </div>
               </div>
