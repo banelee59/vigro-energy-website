@@ -125,7 +125,7 @@ export default function HomePage() {
               <CardHeader className="pb-4">
                 <div className="relative h-48 mb-6 rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                   src="/images/pic 1.jpeg"
                     alt="Crude Oil"
                     fill
                     className="object-cover"
@@ -149,7 +149,7 @@ export default function HomePage() {
               <CardHeader className="pb-4">
                 <div className="relative h-48 mb-6 rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="/images/vilgro truck.jpeg"
                     alt="Refined Petroleum"
                     fill
                     className="object-cover"
@@ -173,7 +173,7 @@ export default function HomePage() {
               <CardHeader className="pb-4">
                 <div className="relative h-48 mb-6 rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="/images/vilgro2.jpeg"
                     alt="Natural Gas and LNG"
                     fill
                     className="object-cover"
