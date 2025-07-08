@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, Shield, Lightbulb, Heart, Zap, Globe, Building2, Factory, CheckCircle } from "lucide-react"
 
+
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -15,59 +16,61 @@ export default function HomePage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1))
-    }, 3000) // Change image every 3 seconds
-
+    }, 3000)
     return () => clearInterval(interval)
   }, [heroImages.length])
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Full Screen */}
+      {/* Hero Section */}
       <section className="relative h-screen bg-black overflow-hidden">
-        {/* Background Images with Overlay */}
+        {/* Background Images */}
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
             <Image
               key={index}
-              src={image || "/placeholder.svg"}
-              alt={`Energy infrastructure background ${index + 1}`}
+              src={image}
+              alt={`Hero background ${index + 1}`}
               fill
+              sizes="100vw"
+              quality={100}
               className={`object-cover transition-opacity duration-1000 ${
                 index === currentImageIndex ? "opacity-70" : "opacity-0"
               }`}
               priority={index === 0}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80 backdrop-blur-sm" />
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
+          <div className="max-w-4xl mx-auto space-y-8">
             {/* Main Heading */}
-            <div className="mb-8">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 VILGRO ENERGY
               </h1>
-              <div className="w-32 h-1 bg-green-500 mx-auto mb-8"></div>
+              <div className="w-24 h-1 bg-green-500 mx-auto rounded-full" />
             </div>
 
             {/* Tagline */}
-            <div className="mb-12">
-              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-6 leading-tight">
+            <div className="space-y-4">
+              <p className="text-lg md:text-2xl text-white font-medium leading-snug">
                 Contributing towards solving Africa's Energy Security, One Shipment at a Time.
               </p>
-              <p className="text-lg md:text-xl text-green-300 font-medium tracking-wide">
+              <p className="text-base md:text-lg text-green-300 font-light tracking-wide">
                 We trade, develop, and advise on energy solutions for Southern Africa and beyond.
               </p>
             </div>
 
-            {/* Call to Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
               <Link href="/about">
                 <Button
                   size="lg"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 text-lg transition-all duration-300 min-w-[200px]"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-xl shadow-md transition"
                 >
                   Learn More About Us
                 </Button>
@@ -75,14 +78,14 @@ export default function HomePage() {
               <Link href="/services">
                 <Button
                   size="lg"
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 text-lg transition-all duration-300 min-w-[200px] shadow-lg hover:shadow-xl"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:shadow-xl transition"
                 >
                   Our Products
                 </Button>
               </Link>
             </div>
 
-            {/* Image Indicators */}
+            {/* Image indicators */}
             <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
               {heroImages.map((_, index) => (
                 <button
@@ -97,15 +100,15 @@ export default function HomePage() {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
               <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+                <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
               </div>
             </div>
           </div>
         </div>
       </section>
-
+      
       {/* Mission & Vision Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
