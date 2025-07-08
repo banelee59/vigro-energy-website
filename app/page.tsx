@@ -209,83 +209,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Our Products/Services Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Services List */}
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Do / Services</h2>
-              <div className="w-24 h-1 bg-green-500 mb-8"></div>
+{/* Our Products/Services Section */}
+<section className="py-16 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      {/* Left side - Services List */}
+      <div className="flex flex-col justify-center">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Do / Services</h2>
+        <div className="w-24 h-1 bg-[#1b1b83] mb-8"></div>
 
-              <div className="space-y-8">
-                <div className="border-l-4 border-green-500 pl-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Liquid Fuels</h3>
-                  <p className="text-gray-600 mb-4">
-                    Comprehensive liquid fuel trading, sourcing, and supply chain management across Southern Africa.
-                  </p>
-                  <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
-                    Learn More
-                  </Button>
-                </div>
-
-                <div className="border-l-4 border-green-500 pl-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Natural Gas & LNG</h3>
-                  <p className="text-gray-600 mb-4">
-                    Natural gas and LNG solutions for power generation, industrial processes, and energy security.
-                  </p>
-                  <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
-                    Learn More
-                  </Button>
-                </div>
-
-                <div className="border-l-4 border-green-500 pl-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Infrastructure Development</h3>
-                  <p className="text-gray-600 mb-4">
-                    Strategic infrastructure development to enhance energy security and distribution capabilities.
-                  </p>
-                  <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
-                    Learn More
-                  </Button>
-                </div>
-
-                <div className="border-l-4 border-green-500 pl-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Strategic Advisory</h3>
-                  <p className="text-gray-600 mb-4">
-                    Expert advisory services for energy market navigation, risk management, and strategic planning.
-                  </p>
-                  <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
-                    Learn More
-                  </Button>
-                </div>
-
-                <div className="border-l-4 border-green-500 pl-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Mergers & Acquisitions</h3>
-                  <p className="text-gray-600 mb-4">
-                    M&A advisory and transaction support for energy sector consolidation and growth opportunities.
-                  </p>
-                  <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
-                    Learn More
-                  </Button>
-                </div>
-              </div>
+        <div className="space-y-8">
+          {[
+            {
+              title: "Liquid Fuels",
+              desc:
+                "Comprehensive liquid fuel trading, sourcing, and supply chain management across Southern Africa.",
+            },
+            {
+              title: "Natural Gas & LNG",
+              desc:
+                "Natural gas and LNG solutions for power generation, industrial processes, and energy security.",
+            },
+            {
+              title: "Infrastructure Development",
+              desc:
+                "Strategic infrastructure development to enhance energy security and distribution capabilities.",
+            },
+            {
+              title: "Strategic Advisory",
+              desc:
+                "Expert advisory services for energy market navigation, risk management, and strategic planning.",
+            },
+            {
+              title: "Mergers & Acquisitions",
+              desc:
+                "M&A advisory and transaction support for energy sector consolidation and growth opportunities.",
+            },
+          ].map((service, index) => (
+            <div key={index} className="border-l-4 border-[#1b1b83] pl-6">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+              <p className="text-gray-600 mb-4">{service.desc}</p>
+              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
+                Learn More
+              </Button>
             </div>
-
-            {/* Right side - Image */}
-            <div className="relative">
-              <div className="relative h-96 w-full rounded-xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/vilgro truck.jpeg"
-                  alt="Energy services and infrastructure"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-green-500 rounded-full opacity-20 blur-xl"></div>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      {/* Right side - Image aligned to bottom right and going up */}
+      <div className="flex items-end justify-end relative">
+        <div className="relative h-[500px] w-full max-w-md rounded-xl overflow-hidden shadow-2xl mt-[-40px]">
+          <Image
+            src="/images/vilgro truck.jpeg"
+            alt="Energy services and infrastructure"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-32 h-32 bg-green-500 rounded-full opacity-20 blur-xl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
 
       {/* Why Work with Us Section - New Design */}
       <section className="py-20 bg-white">
@@ -379,7 +367,7 @@ export default function HomePage() {
       </section>
 
       {/* Who We Serve Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-black mb-4">Who We Serve?</h2>
