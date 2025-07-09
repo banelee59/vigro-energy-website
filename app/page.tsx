@@ -109,26 +109,141 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* Mission & Vision Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="text-center lg:text-left bg-white rounded-lg p-8 shadow-lg border-l-4 border-green-600">
-              <h2 className="text-3xl font-bold text-green-900 mb-6">Our Mission</h2>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                To power Africa's future through reliable and sustainable energy solutions
-              </p>
-            </div>
-            <div className="text-center lg:text-left bg-white rounded-lg p-8 shadow-lg border-l-4 border-green-600">
-              <h2 className="text-3xl font-bold text-green-800 mb-6">Our Vision</h2>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                To be a trusted partner in enabling access to reliable, innovative, and cleaner energy solutions across
-                Africa—powering progress, resilience, and shared prosperity.
-              </p>
-            </div>
-          </div>
+     {/* Mission & Vision Section */}
+<section className="py-16 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* Section Title
+    <h2 className="text-4xl font-bold text-left text-[#00A651] mb-12">
+      Welcome to Vilgro Energy
+    </h2> */}
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Left Column: Mission & Vision Text */}
+      <div className="space-y-12">
+        <div>
+          <h3 className="text-3xl font-bold text-[#00A651] mb-4">Our Mission</h3>
+          <p className="text-xl text-gray-700 leading-relaxed">
+            To power Africa's future through reliable and sustainable energy solutions.
+          </p>
         </div>
-      </section>
+        <div>
+          <h3 className="text-3xl font-bold text-[#00A651] mb-4">Our Vision</h3>
+          <p className="text-xl text-gray-700 leading-relaxed">
+            To be a trusted partner in enabling access to reliable, innovative, and cleaner energy solutions across
+            Africa—powering progress, resilience, and shared prosperity.
+          </p>
+        </div>
+      </div>
+
+      {/* Right Column: Image */}
+      <div className="flex justify-center">
+        <img
+          src="/images/pic 1.jpeg" // replace with your actual image path
+          alt="Mission and Vision"
+          className="rounded-xl shadow-lg w-full h-auto object-cover max-h-[500px]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{/* Our Products/Services Section */}
+<section className="py-16" style={{ backgroundColor: "#1b1b83" }}>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Section Header */}
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-white mb-4">What We Do / Services</h2>
+      <div className="w-24 h-1 bg-white mx-auto"></div>
+    </div>
+
+    {/* Services Flex Row - Force single line */}
+    <div className="flex flex-row flex-nowrap justify-between space-x-6 overflow-x-auto">
+      {/* Service 1 */}
+      <div className="w-1/5 min-w-[200px] text-center">
+        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+          <img 
+            src="/images/wrench.png" 
+            alt="Liquid Fuels" 
+            className="w-12 h-12 object-contain"
+          />
+        </div>
+        <h3 className="text-lg font-semibold text-white mb-2">Liquid Fuels</h3>
+        <p className="text-white text-sm leading-relaxed">
+          Comprehensive liquid fuel trading, sourcing, and supply chain management across Southern Africa.
+        </p>
+      </div>
+
+      {/* Service 2 */}
+      <div className="w-1/5 min-w-[200px] text-center">
+        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+          <img 
+            src="/images/process.png" 
+            alt="Natural Gas & LNG" 
+            className="w-12 h-12 object-contain"
+          />
+        </div>
+        <h3 className="text-lg font-semibold text-white mb-2">Natural Gas & LNG</h3>
+        <p className="text-white text-sm leading-relaxed">
+          Natural gas and LNG solutions for power generation, industrial processes, and energy security.
+        </p>
+      </div>
+
+      {/* Service 3 */}
+      <div className="w-1/5 min-w-[200px] text-center">
+        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+          <img 
+            src="/images/investment.png" 
+            alt="Infrastructure Development" 
+            className="w-12 h-12 object-contain"
+          />
+        </div>
+        <h3 className="text-lg font-semibold text-white mb-2">Infrastructure Development</h3>
+        <p className="text-white text-sm leading-relaxed">
+          Strategic infrastructure development to enhance energy security and distribution capabilities.
+        </p>
+      </div>
+
+      {/* Service 4 */}
+      <div className="w-1/5 min-w-[200px] text-center">
+        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+          <img 
+            src="/images/operator.png" 
+            alt="Strategic Advisory" 
+            className="w-12 h-12 object-contain"
+          />
+        </div>
+        <h3 className="text-lg font-semibold text-white mb-2">Strategic Advisory</h3>
+        <p className="text-white text-sm leading-relaxed">
+          Expert advisory services for energy market navigation, risk management, and strategic planning.
+        </p>
+      </div>
+
+      {/* Service 5 */}
+      <div className="w-1/5 min-w-[200px] text-center">
+        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+          <img 
+            src="/images/protection.png" 
+            alt="Mergers & Acquisitions" 
+            className="w-12 h-12 object-contain"
+          />
+        </div>
+        <h3 className="text-lg font-semibold text-white mb-2">Mergers & Acquisitions</h3>
+        <p className="text-white text-sm leading-relaxed">
+          M&A advisory and transaction support for energy sector consolidation and growth opportunities.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
       {/* Our Values Section */}
       <section className="py-16 bg-white">
@@ -212,69 +327,8 @@ export default function HomePage() {
         </div>
       </section>
 
-{/* Our Products/Services Section */}
-<section className="py-16 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      {/* Left side - Services List */}
-      <div className="flex flex-col justify-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Do / Services</h2>
-        <div className="w-24 h-1 bg-[#1b1b83] mb-8"></div>
 
-        <div className="space-y-8">
-          {[
-            {
-              title: "Liquid Fuels",
-              desc:
-                "Comprehensive liquid fuel trading, sourcing, and supply chain management across Southern Africa.",
-            },
-            {
-              title: "Natural Gas & LNG",
-              desc:
-                "Natural gas and LNG solutions for power generation, industrial processes, and energy security.",
-            },
-            {
-              title: "Infrastructure Development",
-              desc:
-                "Strategic infrastructure development to enhance energy security and distribution capabilities.",
-            },
-            {
-              title: "Strategic Advisory",
-              desc:
-                "Expert advisory services for energy market navigation, risk management, and strategic planning.",
-            },
-            {
-              title: "Mergers & Acquisitions",
-              desc:
-                "M&A advisory and transaction support for energy sector consolidation and growth opportunities.",
-            },
-          ].map((service, index) => (
-            <div key={index} className="border-l-4 border-[#1b1b83] pl-6">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.desc}</p>
-              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
-                Learn More
-              </Button>
-            </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Right side - Image aligned to bottom right and going up */}
-      <div className="flex items-end justify-end relative">
-        <div className="relative h-[500px] w-full max-w-md rounded-xl overflow-hidden shadow-2xl mt-[-40px]">
-          <Image
-            src="/images/vilgro truck.jpeg"
-            alt="Energy services and infrastructure"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-32 h-32 bg-green-500 rounded-full opacity-20 blur-xl"></div>
-      </div>
-    </div>
-  </div>
-</section>
 
       
 
