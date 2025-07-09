@@ -29,7 +29,7 @@ export default function AboutPage() {
             <p className="text-lg text-gray-600 leading-relaxed">In a region where the shutdown of crude refineries and a deepening electricity crisis have made South Africa and its neighbours increasingly dependent on imported fuels, we saw more than just a challenge — we saw an opportunity. An opportunity for local ownership, for African-led solutions, and for a trusted partner to reshape the region's energy narrative.
             </p>
           </div>
-          <div className="md:w-1/2 relative h-96 w-full rounded-xl overflow-hidden shadow-lg">
+          <div className="md:w-1/2 relative h-[30rem]  w-full rounded-xl overflow-hidden shadow-lg">
             <Image
               src="/images/pic 1.jpeg"
               alt="Vilgro Energy Team"
