@@ -251,87 +251,97 @@ export default function HomePage() {
 
 
 
-      {/* Our Values Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Image */}
-            <div className="relative">
-              <div className="relative h-96 w-full rounded-xl overflow-hidden shadow-2xl">
-                <Image src="/images/vilgro2.jpeg" alt="Team collaboration and values" fill className="object-cover" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-green-500 rounded-full opacity-20 blur-xl"></div>
+     {/* Our Values Section */}
+<section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      {/* Left side - Image */}
+      <div className="relative">
+        <div className="relative h-[40rem] w-full rounded-xl overflow-hidden shadow-2xl">
+          <Image
+            src="/images/vilgro2.jpeg"
+            alt="Team collaboration and values"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-green-500 rounded-full opacity-20 blur-xl"></div>
+      </div>
+
+      {/* Right side - Values List */}
+      <div>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+        <div className="w-24 h-1 bg-green-500 mb-8"></div>
+        <p className="text-xl text-gray-600 mb-8">
+          At the core of Vilgro Energy is a commitment to:
+        </p>
+
+        <div className="space-y-6">
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
+              <Users className="h-6 w-6 text-white" />
             </div>
-
-            {/* Right side - Values List */}
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
-              <div className="w-24 h-1 bg-green-500 mb-8"></div>
-              <p className="text-xl text-gray-600 mb-8">At the core of Vilgro Energy is a commitment to:</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Customer Centricity</h3>
+              <p className="text-gray-600">We exist to serve and empower our customers.</p>
+            </div>
+          </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Customer Centricity</h3>
-                    <p className="text-gray-600">We exist to serve and empower our customers.</p>
-                  </div>
-                </div>
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
+              <Shield className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Integrity</h3>
+              <p className="text-gray-600">
+                We operate with honesty, transparency, and accountability.
+              </p>
+            </div>
+          </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Integrity</h3>
-                    <p className="text-gray-600">We operate with honesty, transparency, and accountability.</p>
-                  </div>
-                </div>
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
+              <Lightbulb className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
+              <p className="text-gray-600">
+                We pioneer smart, forward-looking energy solutions that lead the way
+                toward a more secure, lower-carbon future.
+              </p>
+            </div>
+          </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
-                    <p className="text-gray-600">
-                      We pioneer smart, forward-looking energy solutions that lead the way toward a more secure,
-                      lower-carbon future.
-                    </p>
-                  </div>
-                </div>
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
+              <Zap className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Safety</h3>
+              <p className="text-gray-600">
+                We place the safety of our people, partners, and communities above all
+                else.
+              </p>
+            </div>
+          </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Zap className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Safety</h3>
-                    <p className="text-gray-600">
-                      We place the safety of our people, partners, and communities above all else.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Heart className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Social Impact</h3>
-                    <p className="text-gray-600">
-                      We believe energy must drive not only economies—but also social progress and community
-                      development.
-                    </p>
-                  </div>
-                </div>
-              </div>
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
+              <Heart className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Social Impact</h3>
+              <p className="text-gray-600">
+                We believe energy must drive not only economies—but also social progress
+                and community development.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -339,14 +349,14 @@ export default function HomePage() {
       
 
       {/* Why Work with Us Section - New Design */}
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Work with Us?</h2>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
-              Partner with Africa's leading energy solutions provider. We deliver reliable, innovative, and sustainable
-              energy solutions that power progress across the continent.
-            </p>
+            <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-6">Why Work with Us?</h2>
+            <p className="text-xl text-gray-600 leading-relaxed w-full text-left">
+            Partner with Africa's leading energy solutions provider. We deliver reliable, innovative, and sustainable energy solutions that power progress across the continent.
+          </p>
+
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -409,22 +419,22 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 mb-8">
+          {/* <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Black-owned, proudly South African company</h3>
             <p className="text-lg text-gray-600">
               Level 1 BBBEE status with deep local knowledge and commitment to African energy independence.
             </p>
-          </div>
+          </div> */}
 
           <div>
-            <Link href="/contact">
+            {/* <Link href="/contact">
               <Button
                 size="lg"
                 className="bg-green-600 text-white hover:bg-green-700 font-semibold px-8 py-4 text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 GET STARTED
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
