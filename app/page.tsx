@@ -8,40 +8,48 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Users, Shield, Lightbulb, Heart, Zap, Globe, Building2, Factory, CheckCircle } from "lucide-react"
 
 
-export default function HomePage() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  const heroImages = ["/images/pic 1.jpeg", "/images/cargo4.jpeg", "/images/cargo3.jpeg"]
+export default function HomePage() {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+
+  const heroVideos = [
+    "/images/fire.mp4",
+    "/images/pole.mp4",
+    "/images/oil.mp4"
+  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1))
-    }, 3000)
+      setCurrentVideoIndex((prevIndex) =>
+        prevIndex === heroVideos.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 10000) // Change every 10 seconds
+
     return () => clearInterval(interval)
-  }, [heroImages.length])
+  }, [heroVideos.length])
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen bg-black overflow-hidden">
-        {/* Background Images */}
+        {/* Background Videos */}
         <div className="absolute inset-0">
-          {heroImages.map((image, index) => (
-            <Image
+          {heroVideos.map((video, index) => (
+            <video
               key={index}
-              src={image}
-              alt={`Hero background ${index + 1}`}
-              fill
-              sizes="100vw"
-              quality={100}
-              className={`object-cover transition-opacity duration-1000 ${
-                index === currentImageIndex ? "opacity-70" : "opacity-0"
+              src={video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
+                index === currentVideoIndex ? "opacity-70" : "opacity-0"
               }`}
-              priority={index === 0}
             />
           ))}
+
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80 backdrop-blur-sm" />
+          {/* <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80 backdrop-blur-sm" /> */}
         </div>
 
         {/* Hero Content */}
@@ -68,31 +76,27 @@ export default function HomePage() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
               <Link href="/about">
-                <Button
-                  size="lg"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-xl shadow-md transition"
-                >
+                <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-xl shadow-md transition">
                   Learn More About Us
-                </Button>
+                </button>
               </Link>
               <Link href="/services">
-                <Button
-                  size="lg"
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:shadow-xl transition"
-                >
+                <button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:shadow-xl transition">
                   Our Products
-                </Button>
+                </button>
               </Link>
             </div>
 
-            {/* Image indicators */}
+            {/* Video Indicators */}
             <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {heroImages.map((_, index) => (
+              {heroVideos.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentImageIndex(index)}
+                  onClick={() => setCurrentVideoIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentImageIndex ? "bg-green-500 scale-125" : "bg-white/50 hover:bg-white/75"
+                    index === currentVideoIndex
+                      ? "bg-green-500 scale-125"
+                      : "bg-white/50 hover:bg-white/75"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -110,7 +114,7 @@ export default function HomePage() {
       </section>
       
      {/* Mission & Vision Section */}
-<section className="py-16 bg-gray-50">
+<section className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     {/* Section Title
@@ -151,93 +155,94 @@ export default function HomePage() {
 
 
 {/* Our Products/Services Section */}
-<section className="py-16" style={{ backgroundColor: "#1b1b83" }}>
+<section className="py-16 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Section Header */}
     <div className="text-center mb-12">
-      <h2 className="text-4xl font-bold text-white mb-4">What We Do / Services</h2>
-      <div className="w-24 h-1 bg-white mx-auto"></div>
+      <h2 className="text-4xl font-bold text-black mb-4">Services</h2>
+      <div className="w-24 h-1 bg-black mx-auto"></div>
     </div>
 
     {/* Services Flex Row - Force single line */}
     <div className="flex flex-row flex-nowrap justify-between space-x-6 overflow-x-auto">
       {/* Service 1 */}
       <div className="w-1/5 min-w-[200px] text-center">
-        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+        <div className="w-20 h-20 bg-gray-50 rounded-lg mx-auto mb-4 flex items-center justify-center">
           <img 
             src="/images/wrench.png" 
             alt="Liquid Fuels" 
             className="w-12 h-12 object-contain"
           />
         </div>
-        <h3 className="text-lg font-semibold text-white mb-2">Liquid Fuels</h3>
-        <p className="text-white text-sm leading-relaxed">
+        <h3 className="text-lg font-semibold text-black mb-2">Liquid Fuels</h3>
+        <p className="text-black text-sm leading-relaxed">
           Comprehensive liquid fuel trading, sourcing, and supply chain management across Southern Africa.
         </p>
       </div>
 
       {/* Service 2 */}
       <div className="w-1/5 min-w-[200px] text-center">
-        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+        <div className="w-20 h-20 bg-gray-50 rounded-lg mx-auto mb-4 flex items-center justify-center">
           <img 
             src="/images/process.png" 
             alt="Natural Gas & LNG" 
             className="w-12 h-12 object-contain"
           />
         </div>
-        <h3 className="text-lg font-semibold text-white mb-2">Natural Gas & LNG</h3>
-        <p className="text-white text-sm leading-relaxed">
+        <h3 className="text-lg font-semibold text-black mb-2">Natural Gas & LNG</h3>
+        <p className="text-black text-sm leading-relaxed">
           Natural gas and LNG solutions for power generation, industrial processes, and energy security.
         </p>
       </div>
 
       {/* Service 3 */}
       <div className="w-1/5 min-w-[200px] text-center">
-        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+        <div className="w-20 h-20 bg-gray-50 rounded-lg mx-auto mb-4 flex items-center justify-center">
           <img 
             src="/images/investment.png" 
             alt="Infrastructure Development" 
             className="w-12 h-12 object-contain"
           />
         </div>
-        <h3 className="text-lg font-semibold text-white mb-2">Infrastructure Development</h3>
-        <p className="text-white text-sm leading-relaxed">
+        <h3 className="text-lg font-semibold text-black mb-2">Infrastructure Development</h3>
+        <p className="text-black text-sm leading-relaxed">
           Strategic infrastructure development to enhance energy security and distribution capabilities.
         </p>
       </div>
 
       {/* Service 4 */}
       <div className="w-1/5 min-w-[200px] text-center">
-        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+        <div className="w-20 h-20 bg-gray-50 rounded-lg mx-auto mb-4 flex items-center justify-center">
           <img 
             src="/images/operator.png" 
             alt="Strategic Advisory" 
             className="w-12 h-12 object-contain"
           />
         </div>
-        <h3 className="text-lg font-semibold text-white mb-2">Strategic Advisory</h3>
-        <p className="text-white text-sm leading-relaxed">
+        <h3 className="text-lg font-semibold text-black mb-2">Strategic Advisory</h3>
+        <p className="text-black text-sm leading-relaxed">
           Expert advisory services for energy market navigation, risk management, and strategic planning.
         </p>
       </div>
 
       {/* Service 5 */}
       <div className="w-1/5 min-w-[200px] text-center">
-        <div className="w-20 h-20 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center">
+        <div className="w-20 h-20 bg-gray-50 rounded-lg mx-auto mb-4 flex items-center justify-center">
           <img 
             src="/images/protection.png" 
             alt="Mergers & Acquisitions" 
             className="w-12 h-12 object-contain"
           />
         </div>
-        <h3 className="text-lg font-semibold text-white mb-2">Mergers & Acquisitions</h3>
-        <p className="text-white text-sm leading-relaxed">
+        <h3 className="text-lg font-semibold text-black mb-2">Mergers & Acquisitions</h3>
+        <p className="text-black text-sm leading-relaxed">
           M&A advisory and transaction support for energy sector consolidation and growth opportunities.
         </p>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
