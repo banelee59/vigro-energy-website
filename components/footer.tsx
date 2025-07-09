@@ -10,7 +10,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-3">
               <Image
-                src="/images/log.jpeg" // ✅ Replace this with your logo path
+                src="/images/log.png" // ✅ Replace this with your logo path
                 alt="Vilgro Energy Logo"
                 width={40}
                 height={40}
