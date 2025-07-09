@@ -45,7 +45,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">Drop us a message</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                We would love to hear from you, feel free to get in touch and we will get in touch as soon as possible.
+              At the heart of everything we do is service. Contact us, and we’ll be ready to assist with your energy needs
               </p>
             </div>
 
