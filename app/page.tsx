@@ -9,6 +9,7 @@ import { Users, Shield, Lightbulb, Heart, Zap, Globe, Building2, Factory, CheckC
 
 
 
+
 export default function HomePage() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
 
@@ -47,9 +48,6 @@ export default function HomePage() {
               }`}
             />
           ))}
-
-          {/* Overlay */}
-          {/* <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80 backdrop-blur-sm" /> */}
         </div>
 
         {/* Hero Content */}
@@ -74,15 +72,22 @@ export default function HomePage() {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 flex-wrap">
               <Link href="/about">
                 <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-xl shadow-md transition">
                   Learn More About Us
                 </button>
               </Link>
+
               <Link href="/services">
                 <button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:shadow-xl transition">
                   Our Products
+                </button>
+              </Link>
+
+              <Link href="/order">
+                <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-xl shadow-md transition">
+                  Place an Order
                 </button>
               </Link>
             </div>
@@ -113,6 +118,7 @@ export default function HomePage() {
         </div>
       </section>
       
+            
      {/* Mission & Vision Section */}
 <section className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
