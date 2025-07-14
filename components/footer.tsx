@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Increased horizontal spacing between columns */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-6 gap-x-20">
+        {/* Increased spacing between columns */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-6 gap-x-16">
 
           {/* 1. Company Info & Contact */}
           <div>
@@ -21,49 +21,46 @@ export function Footer() {
               />
               <span className="text-lg font-bold">Vilgro Energy</span>
             </div>
-            <p className="text-gray-300 text-sm mb-3">
+
+            <p className="text-gray-300 text-sm mb-4">
               Providing Energy Solutions Anywhere, Anytime, Across Africa.
             </p>
-            <p className="text-gray-400 text-sm">
-              <strong>Address:</strong><br />Block B Cullinan Office Park, Cullinan Close, Morningside, Sandton, 2057
-            </p>
-            <p className="text-gray-400 text-sm">
-              <strong>Email:</strong> info@vilgro.com | sales@vilgro.com
-            </p>
-            <p className="text-gray-400 text-sm">
-              <strong>Phone:</strong> +27 (71) 683 8744 | +27 72 612 3618
-            </p>
+
+            <div className="mb-3">
+              <p className="text-gray-400 text-sm font-semibold">Address:</p>
+              <p className="text-gray-400 text-sm">
+                Block B Cullinan Office Park,<br />
+                Cullinan Close, Morningside,<br />
+                Sandton, 2057
+              </p>
+            </div>
+
+            <div className="mb-3">
+              <p className="text-gray-400 text-sm font-semibold">Email:</p>
+              <p className="text-gray-400 text-sm">
+                info@vilgro.com<br />
+                sales@vilgro.com
+              </p>
+            </div>
+
+            <div>
+              <p className="text-gray-400 text-sm font-semibold">Phone:</p>
+              <p className="text-gray-400 text-sm">
+                +27 (71) 683 8744<br />
+                +27 72 612 3618
+              </p>
+            </div>
           </div>
 
           {/* 2. Services */}
           <div>
             <h3 className="text-base font-semibold mb-3">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">
-                  Liquid Fuels
-                </Link>
-              </li>
-              <li>
-                <Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">
-                  Natural Gas & LNG
-                </Link>
-              </li>
-              <li>
-                <Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">
-                  Infrastructure Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">
-                  Strategic Advisory
-                </Link>
-              </li>
-              <li>
-                <Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">
-                  Mergers & Acquisitions
-                </Link>
-              </li>
+              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Liquid Fuels</Link></li>
+              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Natural Gas & LNG</Link></li>
+              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Infrastructure Development</Link></li>
+              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Strategic Advisory</Link></li>
+              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Mergers & Acquisitions</Link></li>
             </ul>
           </div>
 
@@ -71,21 +68,9 @@ export function Footer() {
           <div>
             <h3 className="text-base font-semibold mb-3">Company</h3>
             <ul className="space-y-1 text-sm">
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/team" className="text-gray-300 hover:text-white transition-colors">
-                  Team
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" className="text-gray-300 hover:text-white transition-colors">
-                  News & Insights
-                </Link>
-              </li>
+              <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/team" className="text-gray-300 hover:text-white transition-colors">Team</Link></li>
+              <li><Link href="/news" className="text-gray-300 hover:text-white transition-colors">News & Insights</Link></li>
             </ul>
           </div>
 
