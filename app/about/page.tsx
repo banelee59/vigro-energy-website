@@ -41,31 +41,52 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story Section */}
-<section className="py-20 bg-gray-50">
+  {/* Our Story Section */}
+<section className="py-24 bg-gradient-to-b from-gray-50 to-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    {/* Heading */}
-    <div className="text-left mb-10">
-      <h2 className="text-4xl font-extrabold text-gray-900">Our Story</h2>
-      <div className="mt-2 w-20 h-1 bg-[#1b1b83] rounded"></div>
+    {/* Heading with decorative elements */}
+    <div className="text-center mb-16">
+      <span className="inline-block text-lg font-semibold text-[#1b1b83] mb-2">
+        OUR JOURNEY
+      </span>
+      <h2 className="text-5xl font-bold text-gray-900 mb-4">
+        Our <span className="text-[#1b1b83]">Story</span>
+      </h2>
+      <div className="flex justify-center">
+        <div className="w-24 h-1.5 bg-[#1b1b83] rounded-full"></div>
+        <div className="w-4 h-1.5 bg-yellow-400 rounded-full ml-1"></div>
+      </div>
     </div>
 
-    {/* Full Width Text */}
-    <div className="space-y-6 text-gray-800 text-lg leading-relaxed">
-      <p>
-        Our work is grounded in reliability, innovation, and collaboration. We've built strong, strategic alliances
-        with global refiners, traders, national oil companies, and governments—relationships forged through trust,
-        consistency, and a deep understanding of complex markets.
-      </p>
-      <p>
-        From crude and refined product sourcing to storage, logistics, and transport, our expertise spans the full
-        energy value chain. We don't just move energy; we unlock its potential—designing tailored supply strategies
-        that keep industries moving and economies growing.
-      </p>
+    {/* Content with improved typography */}
+    <div className="max-w-4xl mx-auto ">
+      <div className="space-y-8 text-gray-700 text-lg leading-relaxed">
+        <p className="text-xl text-gray-800 font-medium">
+          Our work is grounded in <span className="text-[#1b1b83] font-semibold">reliability</span>, <span className="text-[#1b1b83] font-semibold">innovation</span>, and <span className="text-[#1b1b83] font-semibold">collaboration</span>.
+        </p>
+        
+        <p>
+          We've built strong, strategic alliances with global refiners, traders, national oil companies, and governments—relationships forged through trust, consistency, and a deep understanding of complex markets.
+        </p>
+        
+        <div className="relative pl-6 border-l-4 border-[#1b1b83]">
+          <p className="italic text-gray-900">
+            From crude and refined product sourcing to storage, logistics, and transport, our expertise spans the full energy value chain.
+          </p>
+        </div>
+        
+        <p className="text-xl text-gray-800 font-medium">
+          We don't just move energy; we <span className="text-[#1b1b83]">unlock its potential</span>—designing tailored supply strategies that keep industries moving and economies growing.
+        </p>
+      </div>
+    </div>
+
+    {/* Optional decorative element */}
+    <div className="flex justify-center mt-16">
+      <div className="w-32 h-0.5 bg-gray-200"></div>
     </div>
   </div>
 </section>
-
 
       {/* Our Approach Section */}
       <section className="py-16 bg-white">
@@ -159,45 +180,73 @@ export default function AboutPage() {
       </section>
 
      
+{/* Meet our team */}
+      <section className="py-16 bg-gray-50">
+    <div className="max-w-7xl mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+      <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+      <p className="max-w-3xl mx-auto text-lg text-gray-600 mt-6">
+        Our dedicated team of professionals drives our mission forward with expertise, integrity, and passion.
+      </p>
+    </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      {/* Team Member 1 */}
+      <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+        <img
+           src="/images/ceo.png"
+          alt="Team Member 1"
+          className="w-32 h-32 rounded-full mx-auto mb-4"
+        />
+        <h3 className="text-xl font-semibold text-gray-900">Phinda Vilakazi</h3>
+        <p className="text-blue-600">Chief Executive Officer</p>
+        <p className="mt-2 text-gray-600 text-sm">
+          Jane brings 20 years of leadership in energy and infrastructure projects across Africa.
+        </p>
+      </div>
+      {/* Team Member 2 */}
+      <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+        <img
+           src="/images/coo.png"
+          alt="Team Member 2"
+          className="w-32 h-32 rounded-full mx-auto mb-4"
+        />
+        <h3 className="text-xl font-semibold text-gray-900">John Sichinga</h3>
+        <p className="text-blue-600">Chief Operating Officer</p>
+        <p className="mt-2 text-gray-600 text-sm">
+          John oversees our operations, ensuring efficient and sustainable energy solutions.
+        </p>
+      </div>
+      {/* Team Member 3 */}
+      <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Team Member 3"
+          className="w-32 h-32 rounded-full mx-auto mb-4"
+        />
+        <h3 className="text-xl font-semibold text-gray-900">Sarah Lee</h3>
+        <p className="text-blue-600">Chief Financial Officer</p>
+        <p className="mt-2 text-gray-600 text-sm">
+          Sarah manages our financial strategy, driving growth and sustainability.
+        </p>
+      </div>
+      {/* Team Member 4 */}
+      <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Team Member 4"
+          className="w-32 h-32 rounded-full mx-auto mb-4"
+        />
+        <h3 className="text-xl font-semibold text-gray-900">Michael Brown</h3>
+        <p className="text-blue-600">Head of Development</p>
+        <p className="mt-2 text-gray-600 text-sm">
+          Michael leads project development and implementation with innovative solutions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* Leadership Section */}
-      {/* <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Leadership</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600 mt-6">
-              With decades of combined experience in global energy markets, our leadership team brings unparalleled expertise to Africa's energy challenges.
-            </p>
-          </div>
-          
-          
-        </div>
-      </section> */}
-
-      {/* CTA Section */}
-      {/* <section className="py-20 bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Partner With Us</h2>
-          <p className="text-blue-100 mb-8 text-lg leading-relaxed max-w-3xl mx-auto">
-            Join Vilgro Energy in shaping Africa's energy future through reliable, innovative, and sustainable solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition"
-            >
-              Get in Touch
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition"
-            >
-              Our Services
-            </Link>
-          </div>
-        </div>
-      </section> */}
     </div>
   )
 }

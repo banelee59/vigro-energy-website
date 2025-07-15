@@ -29,9 +29,9 @@ export function Footer() {
             <div className="mb-3">
               <p className="text-gray-400 text-sm font-semibold">Address:</p>
               <p className="text-gray-400 text-sm">
-                Block B Cullinan Office Park,<br />
-                Cullinan Close, Morningside,<br />
-                Sandton, 2057
+                106 Johan Avenue,<br />
+                Dennehof<br />
+                Sandton
               </p>
             </div>
 
@@ -46,8 +46,7 @@ export function Footer() {
             <div>
               <p className="text-gray-400 text-sm font-semibold">Phone:</p>
               <p className="text-gray-400 text-sm">
-                +27 (71) 683 8744<br />
-                +27 72 612 3618
+                +27 (10) 003 7840
               </p>
             </div>
           </div>
