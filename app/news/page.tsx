@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Calendar } from "lucide-react"
+import Image from "next/image";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Calendar, Linkedin } from "lucide-react";
 
 export default function NewsPage() {
   const articles = [
@@ -13,6 +13,7 @@ export default function NewsPage() {
       date: "January 15, 2025",
       category: "Market Analysis",
       image: "/placeholder.svg?height=300&width=500",
+      linkedin: "https://www.linkedin.com/company/vigro-energy/posts/southern-africa-energy-market-outlook-2025"
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ export default function NewsPage() {
       date: "December 20, 2024",
       category: "Partnership",
       image: "/placeholder.svg?height=300&width=500",
+      linkedin: "https://www.linkedin.com/company/vigro-energy/posts/strategic-partnership-regional-refiners"
     },
     {
       id: 3,
@@ -31,6 +33,7 @@ export default function NewsPage() {
       date: "November 28, 2024",
       category: "Industry Insights",
       image: "/placeholder.svg?height=300&width=500",
+      linkedin: "https://www.linkedin.com/company/vigro-energy/posts/future-lng-africa"
     },
     {
       id: 4,
@@ -39,6 +42,7 @@ export default function NewsPage() {
       date: "November 10, 2024",
       category: "Sustainability",
       image: "/placeholder.svg?height=300&width=500",
+      linkedin: "https://www.linkedin.com/company/vigro-energy/posts/sustainable-energy-solutions"
     },
     {
       id: 5,
@@ -48,6 +52,7 @@ export default function NewsPage() {
       date: "October 25, 2024",
       category: "Infrastructure",
       image: "/placeholder.svg?height=300&width=500",
+      linkedin: "https://www.linkedin.com/company/vigro-energy/posts/energy-infrastructure-africa"
     },
     {
       id: 6,
@@ -57,8 +62,9 @@ export default function NewsPage() {
       date: "October 12, 2024",
       category: "Trading",
       image: "/placeholder.svg?height=300&width=500",
+      linkedin: "https://www.linkedin.com/company/vigro-energy/posts/crude-oil-trading-strategies"
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen">
@@ -83,6 +89,7 @@ export default function NewsPage() {
                 alt="Featured article"
                 fill
                 className="object-cover rounded-lg"
+                priority
               />
             </div>
             <div>
@@ -98,9 +105,20 @@ export default function NewsPage() {
                 for the coming year. We explore market dynamics, regulatory changes, and investment opportunities that
                 will shape the industry.
               </p>
-              <Button className="bg-green-700 hover:bg-green-800">
-                Read Full Article <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <div className="flex space-x-4">
+                <Button className="bg-green-700 hover:bg-green-800">
+                  Read Full Article <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <a 
+                  href="https://www.linkedin.com/company/vigro-energy/posts/southern-africa-energy-market-outlook-2025" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-green-700 bg-white hover:bg-gray-50"
+                >
+                  <Linkedin className="h-5 w-5 mr-2" />
+                  Share
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -117,10 +135,11 @@ export default function NewsPage() {
                 <CardHeader>
                   <div className="relative h-48 mb-4">
                     <Image
-                      src={article.image || "/placeholder.svg"}
+                      src={article.image}
                       alt={article.title}
                       fill
                       className="object-cover rounded-lg"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
@@ -134,33 +153,26 @@ export default function NewsPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="mb-4 line-clamp-3">{article.excerpt}</CardDescription>
-                  <Button variant="link" className="p-0 h-auto text-green-700 hover:text-green-800">
-                    Read More <ArrowRight className="ml-1 h-4 w-4" />
-                  </Button>
+                  <div className="flex justify-between items-center">
+                    <Button variant="link" className="p-0 h-auto text-green-700 hover:text-green-800">
+                      Read More <ArrowRight className="ml-1 h-4 w-4" />
+                    </Button>
+                    <a 
+                      href={article.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-500 hover:text-blue-600"
+                      title="View on LinkedIn"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-16 bg-green-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Stay Informed</h2>
-          <p className="text-green-100 mb-8">
-            Subscribe to our newsletter for the latest energy market insights and company updates.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-2 rounded-lg border-0 focus:ring-2 focus:ring-green-300"
-            />
-            <Button className="bg-white text-green-700 hover:bg-gray-100">Subscribe</Button>
-          </div>
-        </div>
-      </section>
     </div>
-  )
+  );
 }

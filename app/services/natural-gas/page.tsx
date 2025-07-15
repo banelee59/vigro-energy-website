@@ -5,23 +5,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function NaturalGasPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gray-50 ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-gradient-to-r from-green-900 to-green-700 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black/30 z-0"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl font-bold  text-green-800 mb-6">Natural Gas & LNG Solutions</h1>
-              <p className="text-xl mb-8 text-green-800">
+              <h1 className="text-5xl font-bold mb-6 leading-tight">Natural Gas & LNG Solutions</h1>
+              <p className="text-xl mb-8 text-green-100">
                 Monetizing Southern Africa's gas discoveries to drive industrialization and sustainable energy transition.
               </p>
-              <Button className="bg-white text-green-800 hover:bg-gray-100">
+              <Button className="bg-white text-green-800 hover:bg-gray-100 px-8 py-6 text-lg font-medium rounded-full shadow-lg hover:scale-105 transition-transform">
                 Contact Our Gas Experts
               </Button>
             </div>
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform">
               <Image
-                src="/services/natural-gas-hero.jpg"
+                src="/images/pic 1.jpeg"
                 alt="Natural Gas Infrastructure"
                 fill
                 className="object-cover"
@@ -389,7 +390,7 @@ export default function NaturalGasPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
@@ -411,7 +412,7 @@ export default function NaturalGasPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
