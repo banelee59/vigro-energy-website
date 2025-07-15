@@ -18,7 +18,7 @@ export default function AboutPage() {
 
       {/* Hero Section with Heading and Image */}
       <section className="relative bg-white">
-        <div className="max-w-7xl mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Powering Africa's Future Through <span className="text-blue-600">Energy Solutions</span>
@@ -29,7 +29,7 @@ export default function AboutPage() {
             <p className="text-lg text-gray-600 leading-relaxed">In a region where the shutdown of crude refineries and a deepening electricity crisis have made South Africa and its neighbours increasingly dependent on imported fuels, we saw more than just a challenge — we saw an opportunity. An opportunity for local ownership, for African-led solutions, and for a trusted partner to reshape the region's energy narrative.
             </p>
           </div>
-          <div className="md:w-1/2 relative h-[30rem]  w-full rounded-xl overflow-hidden shadow-lg">
+          <div className="md:w-1/2 relative h-80 w-80 rounded-xl overflow-hidden shadow-lg">
             <Image
               src="/images/pic 1.jpeg"
               alt="Vilgro Energy Team"
@@ -59,7 +59,7 @@ export default function AboutPage() {
     </div>
 
     {/* Content with improved typography */}
-    <div className="max-w-4xl mx-auto ">
+    <div className="max-w-6xl mx-auto ">
       <div className="space-y-8 text-gray-700 text-lg leading-relaxed">
         <p className="text-xl text-gray-800 font-medium">
           Our work is grounded in <span className="text-[#1b1b83] font-semibold">reliability</span>, <span className="text-[#1b1b83] font-semibold">innovation</span>, and <span className="text-[#1b1b83] font-semibold">collaboration</span>.
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
       {/* Our Approach Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Approach</h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
@@ -126,7 +126,7 @@ export default function AboutPage() {
 
       {/* Our Impact Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Impact</h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
@@ -181,8 +181,8 @@ export default function AboutPage() {
 
      
 {/* Meet our team */}
-      <section className="py-16 bg-gray-50">
-    <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16 bg-white">
+    <div className="max-w-6xl mx-auto px-4">
     <div className="text-center mb-16">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
       <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
@@ -192,7 +192,7 @@ export default function AboutPage() {
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
       {/* Team Member 1 */}
-      <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+      <div className="bg-gray-50 rounded-lg shadow-lg p-6 text-left">
         <img
            src="/images/ceo.png"
           alt="Team Member 1"
@@ -205,7 +205,7 @@ export default function AboutPage() {
         </p>
       </div>
       {/* Team Member 2 */}
-      <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+      <div className="bg-gray-50 rounded-lg shadow-lg p-6 text-left">
         <img
            src="/images/coo.png"
           alt="Team Member 2"
@@ -218,7 +218,7 @@ export default function AboutPage() {
         </p>
       </div>
       {/* Team Member 3 */}
-      <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+      <div className="bg-gray-50 rounded-lg shadow-lg p-6 text-left">
         <img
           src="https://via.placeholder.com/150"
           alt="Team Member 3"
@@ -231,7 +231,7 @@ export default function AboutPage() {
         </p>
       </div>
       {/* Team Member 4 */}
-      <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+      <div className="bg-gray-50 rounded-lg shadow-lg p-6 text-left">
         <img
           src="https://via.placeholder.com/150"
           alt="Team Member 4"
