@@ -2,9 +2,66 @@
 
 import React, { useState } from 'react';
 import { CheckCircle, AlertCircle, Calendar, MapPin, Phone, Mail, Building, User } from 'lucide-react';
+import { sendEnergyFormEmail } from '@/lib/energyFormService';
 
-const VilgroEnergyForm = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  fullName: string;
+  companyName: string;
+  position: string;
+  email: string;
+  contactNumber: string;
+  physicalAddress: string;
+  services: string[];
+  otherService: string;
+  volumeRequirements: string;
+  frequency: string;
+  customFrequency: string;
+  deliveryMethod: string;
+  deliveryLocation: string;
+  startDate: string;
+  needsQuotation: string;
+  hasExistingSupplier: string;
+  budgetEstimate: string;
+  additionalNotes: string;
+  consent: boolean;
+  termsAgreed: boolean;
+}
+
+interface FormErrors {
+  fullName?: string;
+  companyName?: string;
+  email?: string;
+  contactNumber?: string;
+  physicalAddress?: string;
+  services?: string;
+  otherService?: string;
+  consent?: string;
+  termsAgreed?: string;
+}
+
+const serviceOptions: string[] = [
+  'Liquid Fuels (e.g. Diesel, Petrol, Kerosene)',
+  'Natural Gas (Pipeline Supply)',
+  'LNG (Liquefied Natural Gas – bulk or cylinder supply)',
+  'Energy Consulting / Technical Support',
+  'Other'
+];
+
+const frequencyOptions: string[] = [
+  'One-off',
+  'Weekly',
+  'Monthly',
+  'Custom'
+];
+
+const deliveryMethods: string[] = [
+  'Bulk delivery',
+  'Cylinder delivery (for LNG)',
+  'Client collection'
+];
+
+const VilgroEnergyForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     fullName: '',
     companyName: '',
     position: '',
@@ -27,39 +84,20 @@ const VilgroEnergyForm = () => {
     termsAgreed: false
   });
 
-  const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+  const [isSending, setIsSending] = useState<boolean>(false);
 
-  const serviceOptions = [
-    'Liquid Fuels (e.g. Diesel, Petrol, Kerosene)',
-    'Natural Gas (Pipeline Supply)',
-    'LNG (Liquefied Natural Gas – bulk or cylinder supply)',
-    'Energy Consulting / Technical Support',
-    'Other'
-  ];
-
-  const frequencyOptions = [
-    'One-off',
-    'Weekly',
-    'Monthly',
-    'Custom'
-  ];
-
-  const deliveryMethods = [
-    'Bulk delivery',
-    'Cylinder delivery (for LNG)',
-    'Client collection'
-  ];
-
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
     
-    // Clear error when user starts typing
-    if (errors[name]) {
+    if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({
         ...prev,
         [name]: ''
@@ -67,7 +105,7 @@ const VilgroEnergyForm = () => {
     }
   };
 
-  const handleServiceChange = (service) => {
+  const handleServiceChange = (service: string) => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(service)
@@ -76,8 +114,8 @@ const VilgroEnergyForm = () => {
     }));
   };
 
-  const validateForm = () => {
-    const newErrors = {};
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
     
     if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
     if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
@@ -91,7 +129,6 @@ const VilgroEnergyForm = () => {
     if (!formData.consent) newErrors.consent = 'Consent is required';
     if (!formData.termsAgreed) newErrors.termsAgreed = 'You must agree to terms and conditions';
     
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (formData.email && !emailRegex.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
@@ -101,11 +138,23 @@ const VilgroEnergyForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = () => {
-    if (validateForm()) {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSending(true);
+
+    try {
+      await sendEnergyFormEmail(formData);
       setIsSubmitted(true);
-      // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting your form. Please try again later.');
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -119,7 +168,31 @@ const VilgroEnergyForm = () => {
             Thank you for your interest in Vilgro's energy services. Our team will contact you shortly to confirm your requirements, share pricing, and outline next steps.
           </p>
           <button
-            onClick={() => setIsSubmitted(false)}
+            onClick={() => {
+              setIsSubmitted(false);
+              setFormData({
+                fullName: '',
+                companyName: '',
+                position: '',
+                email: '',
+                contactNumber: '',
+                physicalAddress: '',
+                services: [],
+                otherService: '',
+                volumeRequirements: '',
+                frequency: '',
+                customFrequency: '',
+                deliveryMethod: '',
+                deliveryLocation: '',
+                startDate: '',
+                needsQuotation: '',
+                hasExistingSupplier: '',
+                budgetEstimate: '',
+                additionalNotes: '',
+                consent: false,
+                termsAgreed: false
+              });
+            }}
             className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
           >
             Submit Another Request
@@ -133,33 +206,31 @@ const VilgroEnergyForm = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row items-center justify-between bg-white shadow-sm">
-  {/* Left side: Background image */}
-  <div
-    className="w-full md:w-1/2 h-64 md:h-[400px] bg-cover bg-center"
-    style={{
-      backgroundImage: "url('/images/vilgro truck.jpeg')",
-    }}
-  ></div>
+        {/* Left side: Background image */}
+        <div
+          className="w-full md:w-1/2 h-64 md:h-[400px] bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/images/vilgro truck.jpeg')",
+          }}
+        ></div>
 
-  {/* Right side: Content */}
-  <div className="w-full md:w-1/2 px-6 py-12 md:py-20 text-center md:text-left bg-white">
-    <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-      Secure reliable energy.
-    </h1>
-    <h2 className="text-2xl md:text-3xl font-bold text-gray-700 mb-4">
-      Fast, transparent, trusted.
-    </h2>
-    <p className="text-lg text-gray-600 mb-8">
-      Let us power your operations with liquid fuels, natural gas, or LIVS –
-      delivered safely and efficiently across South Africa!
-    </p>
-    <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-      START YOUR ORDER NOW
-    </button>
-  </div>
-</div>
-
-
+        {/* Right side: Content */}
+        <div className="w-full md:w-1/2 px-6 py-12 md:py-20 text-center md:text-left bg-white">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Secure reliable energy.
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-700 mb-4">
+            Fast, transparent, trusted.
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Let us power your operations with liquid fuels, natural gas, or LIVS –
+            delivered safely and efficiently across South Africa!
+          </p>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            START YOUR ORDER NOW
+          </button>
+        </div>
+      </div>
 
       {/* Process Steps */}
       <div className="bg-white border-t">
@@ -200,7 +271,7 @@ const VilgroEnergyForm = () => {
       <div className="max-w-4xl mx-auto px-6 py-8">
         <div className="bg-white rounded-lg shadow-sm">
           <div className="p-8">
-            <div className="space-y-10">
+            <form onSubmit={handleSubmit} className="space-y-10">
               {/* Client Information */}
               <section>
                 <h2 className="text-xl font-semibold text-gray-900 mb-6">Client Information</h2>
@@ -565,13 +636,14 @@ const VilgroEnergyForm = () => {
               {/* Submit Button */}
               <div className="pt-6">
                 <button
-                  onClick={handleSubmit}
-                  className="bg-blue-600 text-white py-3 px-8 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  type="submit"
+                  disabled={isSending}
+                  className="bg-blue-600 text-white py-3 px-8 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  SUBMIT ORDER REQUEST
+                  {isSending ? 'SENDING...' : 'SUBMIT ORDER REQUEST'}
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
