@@ -1,21 +1,26 @@
 "use client"
 
 import React, { useState } from "react"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { sendEmail, ContactFormData } from "@/lib/emailService"
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     phoneNumber: "",
     email: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null)
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
@@ -23,16 +28,31 @@ export default function ContactPage() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({
-      name: "",
-      phoneNumber: "",
-      email: "",
-      message: "",
-    })
-    alert("Thank you for your message. We'll get back to you soon!")
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    const result = await sendEmail(formData)
+    
+    if (result.success) {
+      setFormData({
+        name: "",
+        phoneNumber: "",
+        email: "",
+        message: "",
+      })
+      setSubmitStatus({
+        success: true,
+        message: "Thank you for your message. We'll get back to you soon!"
+      })
+    } else {
+      setSubmitStatus({
+        success: false,
+        message: result.error || "Failed to send message. Please try again later."
+      })
+    }
+    setIsSubmitting(false)
   }
 
   return (
@@ -45,22 +65,12 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">Drop us a message</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-              At the heart of everything we do is service. Contact us, and we’ll be ready to assist with your energy needs
+                At the heart of everything we do is service. Contact us, and we'll be ready to assist with your energy needs
               </p>
             </div>
 
             {/* Logo and Contact Info */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              {/* <div className="flex items-center space-x-4 mb-6">
-                <Image
-                  src="/images/log.png"
-                  alt="ePact Logo"
-                  width={80}
-                  height={80}
-                  className="object-contain"
-                />
-              </div> */}
-
               <div className="space-y-4 text-gray-700">
                 <div>
                   <h3 className="font-semibold text-blue-900 mb-2">Location</h3>
@@ -84,6 +94,12 @@ export default function ContactPage() {
           {/* Right Column - Aligned Form Box */}
           <div className="flex items-end h-full">
             <div className="bg-white rounded-2xl p-8 shadow-lg w-full">
+              {submitStatus && (
+                <div className={`mb-6 p-4 rounded-lg ${submitStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                  {submitStatus.message}
+                </div>
+              )}
+              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name" className="text-sm font-medium text-gray-700 mb-2 block uppercase tracking-wide">
@@ -150,9 +166,10 @@ export default function ContactPage() {
                 <div className="flex justify-end pt-4">
                   <Button
                     type="submit"
-                    className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold uppercase tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl"
+                    disabled={isSubmitting}
+                    className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold uppercase tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    SUBMIT
+                    {isSubmitting ? 'SENDING...' : 'SUBMIT'}
                   </Button>
                 </div>
               </form>
