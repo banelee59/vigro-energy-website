@@ -9,7 +9,7 @@ export default function ServicesPage() {
     {
       title: "Liquid Fuels",
       icon: <Fuel className="h-5 w-5 text-white" />,
-      image: "/services/liquid-fuels.jpg",
+      image: "/images/liquid-fuel.jpeg",
       url: "/services/liquid-fuels"
     },
     {
@@ -21,19 +21,19 @@ export default function ServicesPage() {
     {
       title: "Infrastructure Development",
       icon: <Building className="h-5 w-5 text-white" />,
-      image: "/services/infrastructure.jpg",
+      image: "/images/landing.jpeg",
       url: "/services/infrastructure"
     },
     {
       title: "Strategic Advisory",
       icon: <TrendingUp className="h-5 w-5 text-white" />,
-      image: "/services/advisory.jpg",
+      image: "/images/advisory.jpeg",
       url: "/services/strategic-advisory"
     },
     {
       title: "Mergers & Acquisitions",
       icon: <Handshake className="h-5 w-5 text-white" />,
-      image: "/services/mergers.jpg",
+      image: "/images/acquisition.jpeg",
       url: "/services/mergers-acquisitions"
     }
   ]

@@ -21,7 +21,7 @@ export default function InfrastructurePage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg border border-gray-200">
               <Image
-                src="/services/infrastructure-hero.jpg"
+                src="/images/vilgro.jpeg"
                 alt="Energy Infrastructure"
                 fill
                 className="object-cover"

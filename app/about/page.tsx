@@ -31,7 +31,7 @@ export default function AboutPage() {
           </div>
           <div className="md:w-1/2 relative h-80 w-80 rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/images/pic 1.jpeg"
+              src="/images/truck.jpeg"
               alt="Vilgro Energy Team"
               fill
               className="object-cover"
@@ -134,7 +134,8 @@ export default function AboutPage() {
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 w-full rounded-xl overflow-hidden shadow-lg">
-              <Image src="/images/vilgro truck.jpeg" alt="Our Impact" fill className="object-cover" />
+              <Image src="/images/pic1.jpg"
+               alt="Our Impact" fill className="object-cover" />
             </div>
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
