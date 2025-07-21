@@ -21,7 +21,7 @@ export default function MergersPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg border border-gray-200">
               <Image
-                src="/services/mergers-hero.jpg"
+                src="/images/merge.png"
                 alt="Mergers & Acquisitions"
                 fill
                 className="object-cover"

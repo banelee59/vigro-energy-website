@@ -21,7 +21,7 @@ export default function LiquidFuelsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/services/liquid-fuels-hero.jpg"
+                src="/images/liq.jpg"
                 alt="Liquid Fuels Infrastructure"
                 fill
                 className="object-cover"

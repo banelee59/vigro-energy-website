@@ -21,7 +21,7 @@ export default function AdvisoryPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg border border-gray-200">
               <Image
-                src="/services/advisory-hero.jpg"
+                src="/images/strategic.jpg"
                 alt="Strategic Advisory"
                 fill
                 className="object-cover"
