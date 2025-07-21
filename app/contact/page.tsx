@@ -74,13 +74,13 @@ export default function ContactPage() {
               <div className="space-y-4 text-gray-700">
                 <div>
                   <h3 className="font-semibold text-blue-900 mb-2">Location</h3>
-                  <p>Block B Cullinan Office Park, Cullinan Close, Morningside, Sandton, 2057</p>
+                  <p>106 Johan Avenue, Dennehof, Sandton</p>
                   <p>Serving Southern Africa and beyond</p>
                 </div>
 
                 <div>
                   <h3 className="font-semibold text-blue-900 mb-2">Phone</h3>
-                  <p>+27 (71) 683 8744 | +27 72 612 3618</p>
+                  <p>+27 (10) 003 7840</p>
                 </div>
 
                 <div>

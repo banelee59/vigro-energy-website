@@ -226,9 +226,9 @@ const VilgroEnergyForm: React.FC = () => {
             Let us power your operations with liquid fuels, natural gas, or LIVS –
             delivered safely and efficiently across South Africa!
           </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+          {/* <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
             START YOUR ORDER NOW
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -614,20 +614,20 @@ const VilgroEnergyForm: React.FC = () => {
                   {errors.consent && <p className="text-red-500 text-sm">{errors.consent}</p>}
 
                   <label className="flex items-start space-x-3">
-                    <input
+                    {/* <input
                       type="checkbox"
                       name="termsAgreed"
                       checked={formData.termsAgreed}
                       onChange={handleInputChange}
                       className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-0.5"
-                    />
-                    <span className="text-gray-700">
+                    /> */}
+                    {/* <span className="text-gray-700">
                       I agree to the{' '}
                       <a href="#" className="text-blue-600 hover:text-blue-800 underline">
                         terms of service and data policy
                       </a>
                       .
-                    </span>
+                    </span> */}
                   </label>
                   {errors.termsAgreed && <p className="text-red-500 text-sm">{errors.termsAgreed}</p>}
                 </div>
