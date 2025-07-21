@@ -210,7 +210,7 @@ const VilgroEnergyForm: React.FC = () => {
         <div
           className="w-full md:w-1/2 h-64 md:h-[400px] bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/vilgro truck.jpeg')",
+            backgroundImage: "url('/images/truck.jpeg')",
           }}
         ></div>
 
@@ -223,8 +223,9 @@ const VilgroEnergyForm: React.FC = () => {
             Fast, transparent, trusted.
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Let us power your operations with liquid fuels, natural gas, or LIVS –
-            delivered safely and efficiently across South Africa!
+            Let us power your operations with liquid fuels,<br />
+            natural gas, or LIVS – delivered safely and efficiently<br />
+            across South Africa!
           </p>
           {/* <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
             START YOUR ORDER NOW
