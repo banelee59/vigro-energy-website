@@ -377,7 +377,7 @@ export default function NaturalGasPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg border-4 border-white">
               <Image
-                src="/services/gas-expertise.jpg"
+                src="/images/shipping.jpeg"
                 alt="Gas Pipeline Infrastructure"
                 fill
                 className="object-cover"

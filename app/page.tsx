@@ -85,7 +85,7 @@ export default function HomePage() {
                 </button>
               </Link>
 
-              <Link href="/order">
+              <Link href="/place-order">
                 <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-xl shadow-md transition">
                   Place an Order
                 </button>

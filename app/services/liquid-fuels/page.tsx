@@ -149,7 +149,7 @@ export default function LiquidFuelsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/services/fuel-infrastructure.jpg"
+                src="/images/pic2.jpg"
                 alt="Fuel Storage Terminal"
                 fill
                 className="object-cover"
