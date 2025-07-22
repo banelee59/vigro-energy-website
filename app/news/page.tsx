@@ -11,7 +11,7 @@ export default function NewsPage() {
       excerpt: "Our comprehensive analysis of emerging trends and opportunities in the Southern African energy sector for the coming year.",
       date: "January 15, 2025",
       category: "Market Analysis",
-      image: "/images/energy-market.jpg", // Updated to actual image path
+      image: "/images/news2.jpg", // Updated to actual image path
       linkedin: "https://www.linkedin.com/company/vigro-energy/posts/southern-africa-energy-market-outlook-2025"
     },
     {
@@ -20,7 +20,7 @@ export default function NewsPage() {
       excerpt: "Vigro Energy announces key partnerships to strengthen fuel supply chains across the region and enhance energy security.",
       date: "December 20, 2024",
       category: "Partnership",
-      image: "/images/partnership.jpg", // Updated to actual image path
+      image: "/images/news3.jpg", // Updated to actual image path
       linkedin: "https://www.linkedin.com/company/vigro-energy/posts/strategic-partnership-regional-refiners"
     },
     {
@@ -29,35 +29,9 @@ export default function NewsPage() {
       excerpt: "Exploring the potential of liquefied natural gas to transform Africa's energy landscape and drive economic growth.",
       date: "November 28, 2024",
       category: "Industry Insights",
-      image: "/images/lng-future.jpg", // Updated to actual image path
+      image: "/images/news4.jpeg", // Updated to actual image path
       linkedin: "https://www.linkedin.com/company/vigro-energy/posts/future-lng-africa"
-    // },
-    // {
-    //   id: 4,
-    //   title: "Sustainable Energy Solutions for Southern Africa",
-    //   excerpt: "How Vigro Energy is contributing to sustainable development goals through innovative energy solutions.",
-    //   date: "November 10, 2024",
-    //   category: "Sustainability",
-    //   image: "/images/sustainable-energy.jpg", // Updated to actual image path
-    //   linkedin: "https://www.linkedin.com/company/vigro-energy/posts/sustainable-energy-solutions"
-    // },
-    // {
-    //   id: 5,
-    //   title: "Energy Infrastructure Development in Africa",
-    //   excerpt: "The critical role of infrastructure investment in unlocking Africa's energy potential and economic development.",
-    //   date: "October 25, 2024",
-    //   category: "Infrastructure",
-    //   image: "/images/infrastructure.jpg", // Updated to actual image path
-    //   linkedin: "https://www.linkedin.com/company/vigro-energy/posts/energy-infrastructure-africa"
-    // },
-    // {
-    //   id: 6,
-    //   title: "Crude Oil Trading Strategies in Volatile Markets",
-    //   excerpt: "Expert insights on navigating market volatility and optimizing crude oil trading strategies in uncertain times.",
-    //   date: "October 12, 2024",
-    //   category: "Trading",
-    //   image: "/images/oil-trading.jpg", // Updated to actual image path
-    //   linkedin: "https://www.linkedin.com/company/vigro-energy/posts/crude-oil-trading-strategies"
+   
     },
   ];
 
@@ -133,7 +107,7 @@ export default function NewsPage() {
                 <CardHeader className="flex-1">
                   <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
                     <Image
-                     src="/images/news2.jpg"
+                      src={article.image}
                       alt={article.title}
                       fill
                       className="object-cover"
