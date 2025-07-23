@@ -17,73 +17,112 @@ export default function AboutPage() {
       </section>
 
       {/* Hero Section with Heading and Image */}
-      <section className="relative bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2 space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Powering Africa's Future Through <span className="text-blue-600">Energy Solutions</span>
-            </h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-            At Vilgro Energy, we believe energy is more than just a commodity — it's the heartbeat of progress, industry, and everyday life. Born from a shared vision of bold, independent leadership in the African energy landscape, we are a proudly Level 1 BBBEE company with a singular focus: securing Africa's energy future.</p>
+        <section className="relative bg-white min-h-[calc(100vh-64px)] flex items-center">
+         <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center gap-8">
+        <div className="md:w-1/2 space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Powering Africa's Future Through <span className="text-blue-600">Energy Solutions</span>
+          </h1>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            At Vilgro Energy, we believe energy is more than just a commodity — it's the heartbeat of progress, industry, and everyday life. Born from a shared vision of bold, independent leadership in the African energy landscape, we are a proudly Level 1 BBBEE company with a singular focus: securing Africa's energy future.
+          </p>
 
-            <p className="text-lg text-gray-600 leading-relaxed">In a region where the shutdown of crude refineries and a deepening electricity crisis have made South Africa and its neighbours increasingly dependent on imported fuels, we saw more than just a challenge — we saw an opportunity. An opportunity for local ownership, for African-led solutions, and for a trusted partner to reshape the region's energy narrative.
-            </p>
-          </div>
-          <div className="md:w-1/2 relative h-80 w-80 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/truck.jpeg"
-              alt="Vilgro Energy Team"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
-  {/* Our Story Section */}
-<section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    {/* Heading with decorative elements */}
-    <div className="text-center mb-16">
-      <span className="inline-block text-lg font-semibold text-[#1b1b83] mb-2">
-        OUR JOURNEY
-      </span>
-      <h2 className="text-5xl font-bold text-gray-900 mb-4">
-        Our <span className="text-[#1b1b83]">Story</span>
-      </h2>
-      <div className="flex justify-center">
-        <div className="w-24 h-1.5 bg-[#1b1b83] rounded-full"></div>
-        <div className="w-4 h-1.5 bg-yellow-400 rounded-full ml-1"></div>
-      </div>
-    </div>
-
-    {/* Content with improved typography */}
-    <div className="max-w-6xl mx-auto ">
-      <div className="space-y-8 text-gray-700 text-lg leading-relaxed">
-        <p className="text-xl text-gray-800 font-medium">
-          Our work is grounded in <span className="text-[#1b1b83] font-semibold">reliability</span>, <span className="text-[#1b1b83] font-semibold">innovation</span>, and <span className="text-[#1b1b83] font-semibold">collaboration</span>.
-        </p>
-        
-        <p>
-          We've built strong, strategic alliances with global refiners, traders, national oil companies, and governments—relationships forged through trust, consistency, and a deep understanding of complex markets.
-        </p>
-        
-        <div className="relative pl-6 border-l-4 border-[#1b1b83]">
-          <p className="italic text-gray-900">
-            From crude and refined product sourcing to storage, logistics, and transport, our expertise spans the full energy value chain.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            In a region where the shutdown of crude refineries and a deepening electricity crisis have made South Africa and its neighbours increasingly dependent on imported fuels, we saw more than just a challenge — we saw an opportunity. An opportunity for local ownership, for African-led solutions, and for a trusted partner to reshape the region's energy narrative.
           </p>
         </div>
-        
-        <p className="text-xl text-gray-800 font-medium">
-          We don't just move energy; we <span className="text-[#1b1b83]">unlock its potential</span>—designing tailored supply strategies that keep industries moving and economies growing.
-        </p>
+        <div className="md:w-1/2 relative h-96 w-full rounded-xl overflow-hidden shadow-lg">
+          <Image
+            src="/images/truck.jpeg"
+            alt="Vilgro Energy Team"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
+    </section>
+
+  {/* Our Story Section - Styled like Old Mutual */}
+<section className="py-20 bg-white">
+  <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+    {/* Heading with decorative elements */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-[#0033a1] mb-6 leading-tight">
+        Our <span className="text-[#00a3e0]">Story</span>
+      </h2>
+      <div className="flex justify-center mb-8">
+        <div className="w-20 h-1 bg-[#00a3e0]"></div>
+      </div>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Our journey through time, from our humble beginnings to becoming a leading financial services provider.
+      </p>
+    </div>
+
+   {/* Content with cards and hover effects */}
+   <div className="grid md:grid-cols-2 gap-8">
+      {/* Heritage Card */}
+      <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-[#00a3e0] group">
+        <div className="flex items-center mb-6">
+          <div className="w-12 h-12 bg-gradient-to-br from-[#0033a1] to-[#00a3e0] rounded-lg flex items-center justify-center mr-4 group-hover:rotate-6 transition-transform duration-300">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 className="text-2xl font-bold text-[#0033a1] group-hover:text-[#00a3e0] transition-colors duration-300">Our Heritage</h3>
+        </div>
+        <div className="space-y-4">
+          <p className="text-gray-700 leading-relaxed">
+            Founded in 1845 in Cape Town, South Africa, Old Mutual has grown from a modest fire and life assurance company into a pan-African financial services giant.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Our story is one of resilience, innovation, and unwavering commitment to our customers through changing times and challenging circumstances.
+          </p>
+        </div>
+        <div className="mt-6 pt-4 border-t border-gray-100">
+          <div className="flex items-center text-sm text-[#00a3e0] font-medium">
+            <span>Since 1845</span>
+            <div className="ml-2 w-2 h-2 bg-[#00a3e0] rounded-full"></div>
+            <span className="ml-2">179 Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+      
+      {/* Purpose Card */}
+      <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-[#00a3e0] group">
+        <div className="flex items-center mb-6">
+          <div className="w-12 h-12 bg-gradient-to-br from-[#00a3e0] to-[#0033a1] rounded-lg flex items-center justify-center mr-4 group-hover:rotate-6 transition-transform duration-300">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 className="text-2xl font-bold text-[#0033a1] group-hover:text-[#00a3e0] transition-colors duration-300">Our Purpose</h3>
+        </div>
+        <div className="space-y-4">
+          <p className="text-gray-700 leading-relaxed">
+            We champion mutually positive futures every day by helping our customers, their families, and their communities thrive.
+          </p>
+          <div className="bg-gradient-to-r from-[#f5f9ff] to-[#e8f4fd] p-6 rounded-lg border-l-4 border-[#00a3e0] group-hover:shadow-inner transition-all duration-300">
+            <p className="italic text-gray-900 font-medium">
+              "Our success is measured not just by financial returns, but by the positive impact we create in the communities we serve."
+            </p>
+          </div>
+        </div>
+        <div className="mt-6 pt-4 border-t border-gray-100">
+          <div className="flex items-center text-sm text-[#00a3e0] font-medium">
+            <span>Community First</span>
+            <div className="ml-2 w-2 h-2 bg-[#00a3e0] rounded-full"></div>
+            <span className="ml-2">Mutually Positive Futures</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    {/* Optional decorative element */}
+    {/* Timeline or additional content would go here */}
+    
+    {/* Decorative element at bottom */}
     <div className="flex justify-center mt-16">
-      <div className="w-32 h-0.5 bg-gray-200"></div>
+      <div className="w-32 h-1 bg-gray-200"></div>
     </div>
   </div>
 </section>

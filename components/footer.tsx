@@ -77,8 +77,8 @@ export function Footer() {
           <div>
             <h3 className="text-base font-semibold mb-3 text-green-300">Follow Us</h3>
             <a
-              href="#"
-              target="_blank"
+              href="https://www.linkedin.com/company/vilgro-energy/posts/?feedView=all"
+              target="linkedin"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-9 h-9 bg-blue-700 hover:bg-green-600 rounded-full transition duration-300 shadow mb-2"
               aria-label="Follow us on LinkedIn"
