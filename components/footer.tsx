@@ -55,11 +55,11 @@ export function Footer() {
           <div>
             <h3 className="text-base font-semibold mb-3">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Liquid Fuels</Link></li>
-              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Natural Gas & LNG</Link></li>
-              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Infrastructure Development</Link></li>
-              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Strategic Advisory</Link></li>
-              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Mergers & Acquisitions</Link></li>
+              <li><Link href="/services/liquid-fuels" className="text-gray-300 hover:text-white transition-colors">Liquid Fuels</Link></li>
+              <li><Link href="/services/natural-gas" className="text-gray-300 hover:text-white transition-colors">Natural Gas & LNG</Link></li>
+              <li><Link href="/services/infrastructure" className="text-gray-300 hover:text-white transition-colors">Infrastructure Development</Link></li>
+              <li><Link href="/services/strategic-advisory" className="text-gray-300 hover:text-white transition-colors">Strategic Advisory</Link></li>
+              <li><Link href="/services/mergers-acquisitions" className="text-gray-300 hover:text-white transition-colors">Mergers & Acquisitions</Link></li>
             </ul>
           </div>
 
@@ -68,8 +68,9 @@ export function Footer() {
             <h3 className="text-base font-semibold mb-3">Company</h3>
             <ul className="space-y-1 text-sm">
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/team" className="text-gray-300 hover:text-white transition-colors">Team</Link></li>
+              <li><Link href="/place-order" className="text-gray-300 hover:text-white transition-colors">Place an Order</Link></li>
               <li><Link href="/news" className="text-gray-300 hover:text-white transition-colors">News & Insights</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
